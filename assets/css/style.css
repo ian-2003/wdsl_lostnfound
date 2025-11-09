@@ -1,0 +1,152 @@
+/*
+================================================
+SPCF Lost & Found - Custom Stylesheet
+================================================
+*/
+
+/* 1. Global Styles & Variables
+------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --spcf-blue: #1A237E; /* Primary Deep Blue from logo */
+    --spcf-gold: #FFC107; /* Accent Gold/Yellow from logo */
+    --spcf-dark: #212529;
+    --spcf-light-gray: #f8f9fa;
+    --spcf-background: #f4f7fc; /* A very light blue-gray for the page background */
+    --spcf-success: #198754;
+    --spcf-danger: #dc3545;
+    --spcf-warning: #ffc107;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--spcf-background);
+    background-image: linear-gradient(rgba(244, 247, 252, 0.92), rgba(244, 247, 252, 0.92)), url('../img/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: var(--spcf-dark);
+}
+
+/* Make the footer sticky to the bottom on short pages */
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* 2. Components Customization
+------------------------------------------------ */
+
+/* Navbar */
+.navbar-custom {
+    background-color: var(--spcf-blue);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--spcf-blue);
+    border-color: var(--spcf-blue);
+}
+
+.btn-primary:hover {
+    background-color: #151c68; /* Slightly darker blue */
+    border-color: #151c68;
+    transform: scale(1.02);
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--spcf-gold);
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.3);
+}
+
+/* Tables */
+.table {
+    vertical-align: middle;
+}
+
+.table thead {
+    font-weight: 600;
+    color: var(--spcf-blue);
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+/* 3. Page-Specific Styles
+------------------------------------------------ */
+
+/* Login Page */
+.login-card {
+    max-width: 450px;
+    margin: auto;
+}
+
+/* Admin Dashboard Cards */
+.admin-stat-card .card-body {
+    color: #fff;
+}
+.admin-stat-card .card-footer {
+    background-color: rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+.admin-stat-card:hover .card-footer {
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* Notification Badge */
+.navbar .badge {
+    top: 10px;
+    right: -5px;
+}
+
+/* Item Details Page */
+.item-details-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
